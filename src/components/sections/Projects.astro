@@ -7,15 +7,19 @@ const { projects_see, open_git } = projects_ui;
 <h2>{projects_section}</h2>
 
 <ul class="grid grid-cols-auto-fill gap-4">
-    {
+  {
     projects.map(({ name, description, highlights, url, github }) => {
       return (
         <li>
           <article class=" flex flex-col border border-solid rounded-lg h-full p-4">
             <header class=" flex-1 text-sm">
               <h3>
-                <a class=" font-bold hover:underline"
-                href={url} target="_blank" title={`${projects_see} ${name}`}>
+                <a
+                  class=" font-bold hover:underline"
+                  href={url}
+                  target="_blank"
+                  title={`${projects_see} ${name}`}
+                >
                   {name}
                 </a>
                 {github && (
@@ -28,8 +32,11 @@ const { projects_see, open_git } = projects_ui;
             </header>
             <footer class="flex flex-wrap gap-1 text-xs">
               {highlights.map((highlight) => {
-                return <li class=" text-xs rounded-md bg-gray-200 text-black p-px"
-                >{highlight}</li>;
+                return (
+                  <li class=" text-xs rounded-md bg-gray-200 text-black p-px">
+                    {highlight}
+                  </li>
+                );
               })}
             </footer>
           </article>
