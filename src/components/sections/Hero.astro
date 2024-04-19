@@ -1,23 +1,24 @@
 ---
 import { basics, UI } from "@/location/es.json";
 import Image from "astro/components/Image.astro";
-import "@/style/global.css";
 const { hero_ui } = UI;
 const { open_network, email_send, whatsapp_send } = hero_ui;
-const { name, label, university, image, email, phone, profiles, location } =
+const { name, label, university, email, phone, profiles, location } =
   basics;
 const { city, region, country } = location;
 ---
 <section>
-  <div class="flex flex-row items-center justify-between gap-4">
-    <div class="flex flex-col gap-2 pr-8 w-4/5">
+  <div class="flex flex-row items-center justify-between gap-4
+  s-phone:flex-col s-phone:gap-1">
+    <div class="flex flex-col gap-2 pr-8 w-4/5 
+    s-phone:order-2 s-phone:flex s-phone:items-center s-phone:justify-center s-phone:pr-0">
       <h1>{name}</h1>
       <h1>{label}</h1>
       <h1>{university}</h1>
       <span>
         {city}, {region}, {country}
       </span>
-      <footer>
+      <footer class=" s-phone:flex s-phone:flex-row s-phone:justify-center s-phone:items-center">
         {
           profiles.map(({ network, url, icon }) => {
             let title;
@@ -46,7 +47,7 @@ const { city, region, country } = location;
     </div>
     <figure>
       <Image
-        class="object-cover rounded-xl"
+        class="object-cover rounded-xl s-phone:order-1"
         src="/me.webp"
         alt={name}
         width="170"
@@ -62,6 +63,14 @@ const { city, region, country } = location;
     width: 80%;
     font-size: 1.5rem;
     font-weight: bold;
-    color: black;
+  }
+  @media (max-width: 639px){
+    h1 {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content:center;
+      width: 100%;
+    }
   }
 </style>

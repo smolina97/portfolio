@@ -1,0 +1,36 @@
+---
+import { education, UI } from "@/location/es.json";
+const { education_section } = UI;
+---
+
+<h2>{education_section}</h2>
+<ul class="flex flex-col gap-8">
+  {
+    education.map(
+      ({ institution, url, area, studyType, startDate, endDate }) => {
+        const startExp = new Date(startDate).getFullYear();
+        const endExp =
+          endDate != null ? new Date(endDate).getFullYear() : "Presente";
+        const formattedExp =
+          startExp === endExp ? startExp : `${startExp} - ${endExp}`;
+        return (
+          <li>
+            <article class="m-1">
+              <header class=" flex justify-between items-center">
+                <div>
+                  <a href={url} target="_blank">
+                    <h3 class=" font-bold">{institution}</h3>
+                  </a>
+                  <h4>
+                    {area} - {studyType}
+                  </h4>
+                </div>
+                <time>{formattedExp}</time>
+              </header>
+            </article>
+          </li>
+        );
+      }
+    )
+  }
+</ul>
