@@ -16,10 +16,10 @@ export default {
         "m-phone": { max: "767px" },
         // => @media (max-width: 767px) { ... }
 
-        "s-phone": { max: "639px" },
-        // => @media (max-width: 639px) { ... }
+        "s-phone": { max: "620px" },
+        // => @media (max-width: 620px) { ... }
       },
-      
+
       gridTemplateColumns: {
         'auto-fill': 'repeat(auto-fill, minmax(200px, 1fr))',
       },
@@ -35,4 +35,7 @@ export default {
       });
     },
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };
