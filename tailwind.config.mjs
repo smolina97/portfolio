@@ -4,5 +4,13 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [ function({ addComponents }) {
+      addComponents({
+        'section': {
+          maxWidth: '700px',
+          margin: '0 auto 72px',
+        }
+      })
+    }
+  ]
 }

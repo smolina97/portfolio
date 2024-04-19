@@ -1,0 +1,160 @@
+{
+    "basics": {
+      "name": "Santiago Molina Meji",
+      "label": "Desarrollador Full Stack - Universidad EAFIT",
+      "image": "/me.webp",
+      "email": "smolina_97@outlook.com",
+      "phone": "+54 3148108586",
+      "summary": "INGLES Ingeniero de sistemas cursando sus ultimos semestres en la Universidad EAFIT, con experiencia en el desarrollo de videojuegos en Unity 3D y desarrollo de backend en Python Django, actualmente me encuentro en la busqueda de nuevas oportunidades laborales en el area de desarrollo web.",
+      "location": {
+        "city": "Medellin",
+        "region": "Antioquia",
+        "country": "Colombia"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "midudev",
+          "url": "https://linkedin.com/in/midudev"
+        },
+        {
+          "network": "X",
+          "username": "midudev",
+          "url": "https://x.com/midudev"
+        },
+        {
+          "network": "GitHub",
+          "username": "midudev",
+          "url": "https://github.com/midudev"
+        }
+      ]
+    },
+    "UI" : {
+      "about_section": "Sobre mi",
+      "education_section": "Educación",
+      "experience_section": "Experiencia",
+      "skills_section": "Habilidades",
+      "projects_section": "Proyectos",
+      "references_section": "Referencias",
+      "contact_section": "Contacto",
+      "interests_section": "Intereses",
+      "languages_section": "Idiomas"
+    },
+    "work": [
+      {
+        "name": "Idiomas EAFIT",
+        "position": "Desarrollador de videojuegos con unity",
+        "startDate": "2019",
+        "endDate": "2019",
+        "summary": "Hice parte de un equipo que desarrollo un videojuego en Unity 3D el cual estaba dedicado a ayudar a los niños con el aprendizaje del idioma ingles.",
+        "highlights": [
+          "Unity 3D",
+          "C#",
+          "Desarrollo de videojuegos"
+        ]
+      },
+      {
+        "name": "Carvajal S.A - Universidad EAFIT",
+        "position": "Desarrolador backend",
+        "startDate": "2020",
+        "endDate": "2020",
+        "summary": "Hice parte de un equipo que programa un proyecto de datalabeling para la empresa Carvajal S.A, el cual consistia de un sistema OCR para la lectura de emociones de distintos comentarios, ayude con el desarrollo del backend el cual estaba en python django.",
+        "highlights": [
+          "Python",
+          "Django",
+          "Desarrollo de backend"
+        ]
+      }
+    ],
+    "education": [{
+      "institution": "Universidad EAFIT",
+      "url": "https://www.eafit.edu.co/",
+      "area": "Ingenieria de sistemas",
+      "studyType": "Pregrado",
+      "startDate": "2018",
+      "endDate": "En Curso"
+    }],
+    "skills": [
+      {
+        "name": "HTML",
+        "level": "Master"
+      },
+      {
+        "name": "CSS",
+        "level": "Master"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Avanzado"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Nodejs",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Python",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Django",
+        "level": "Avanzado"
+      },
+      {
+        "name": "PHP",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Laravel",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Unity 3D",
+        "level": "Avanzado"
+      },
+      {
+        "name": "C#",
+        "level": "Avanzado"
+      },
+      {
+        "name": "MySQL",
+        "level": "Avanzado"
+      },
+      {
+        "name": "GitHub",
+        "level": "Avanzado"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Español",
+        "fluency": "Idioma Nativo"
+      },
+      {
+        "language": "Ingles",
+        "fluency": "Intermedio - Nivel B1"
+      }
+    ],
+    "interests": [{
+      "name": "Video Games",
+      "icon": ""
+    }],
+    "references": [{
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }],
+    "projects": [
+      {
+        "name": "",
+        "isActive": true,
+        "description": "",
+        "highlights": [
+          
+        ],
+        "url": ""
+      }
+    ]
+  }
