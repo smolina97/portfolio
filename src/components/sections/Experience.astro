@@ -9,7 +9,7 @@ const { experience_section, time_present } = UI;
     work.map(({ name, position, startDate, endDate, summary }) => {
       const startExp = new Date(startDate).getFullYear();
       const endExp =
-        endDate != null ? new Date(endDate).getFullYear() : {time_present};
+        endDate != null ? new Date(endDate).getFullYear() : time_present;
       const formattedExp =
         startExp === endExp ? startExp : `${startExp} - ${endExp}`;
 

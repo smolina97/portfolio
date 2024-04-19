@@ -1,6 +1,6 @@
 ---
 import { education, UI } from "@/location/es.json";
-const { education_section } = UI;
+const { education_section , time_present } = UI;
 ---
 
 <h2>{education_section}</h2>
@@ -10,7 +10,7 @@ const { education_section } = UI;
       ({ institution, url, area, studyType, startDate, endDate }) => {
         const startExp = new Date(startDate).getFullYear();
         const endExp =
-          endDate != null ? new Date(endDate).getFullYear() : "Presente";
+          endDate != null ? new Date(endDate).getFullYear() : time_present;
         const formattedExp =
           startExp === endExp ? startExp : `${startExp} - ${endExp}`;
         return (
