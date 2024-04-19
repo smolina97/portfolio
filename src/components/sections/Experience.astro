@@ -1,6 +1,6 @@
 ---
 import { work, UI } from "@/location/es.json";
-const { experience_section } = UI;
+const { experience_section, time_present } = UI;
 ---
 
 <h2>{experience_section}</h2>
@@ -9,7 +9,7 @@ const { experience_section } = UI;
     work.map(({ name, position, startDate, endDate, summary }) => {
       const startExp = new Date(startDate).getFullYear();
       const endExp =
-        endDate != null ? new Date(endDate).getFullYear() : "Presente";
+        endDate != null ? new Date(endDate).getFullYear() : {time_present};
       const formattedExp =
         startExp === endExp ? startExp : `${startExp} - ${endExp}`;
 
@@ -18,8 +18,8 @@ const { experience_section } = UI;
           <article class=" m-1">
             <header class=" flex justify-between items-center">
               <div>
-                <h3>{name}</h3>
-                <h4>{position}</h4>
+                <h3 class=" font-bold">{name}</h3>
+                <h4 class=" font-semibold">{position}</h4>
               </div>
               <time>{formattedExp}</time>
             </header>

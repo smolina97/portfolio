@@ -1,0 +1,58 @@
+---
+import { skills, UI } from "@/location/es.json";
+const { skills_section } = UI;
+
+import astro from "@/icons/astro.astro";
+import AWS from "@/icons/aws.astro";
+import c_sharp from "@/icons/c-sharp.astro";
+import CSS from "@/icons/css.astro";
+import Django from "@/icons/django.astro";
+import Flask from "@/icons/flask.astro";
+import Github from "@/icons/github.astro";
+import HTML from "@/icons/html.astro";
+import JavaScript from "@/icons/javascript.astro";
+import Laravel from "@/icons/laravel.astro";
+import MySQL from "@/icons/mysql.astro";
+import nodejs from "@/icons/nodejs.astro";
+import PHP from "@/icons/php.astro";
+import Python from "@/icons/python.astro";
+import TypeScript from "@/icons/typescript.astro";
+
+const skill_icon: Record<string, any> = {
+  Astro: astro,
+  AWS,
+  "C#": c_sharp,
+  CSS,
+  Django,
+  Flask,
+  Github,
+  HTML,
+  JavaScript,
+  Laravel,
+  MySQL,
+  "Node.js": nodejs,
+  PHP,
+  Python,
+  TypeScript,
+};
+---
+
+<h2>{skills_section}</h2>
+<ul class=" inline-flex flex-wrap gap-2 justify-center">
+  {
+    skills.map(({ name }) => {
+      const Icon = skill_icon[name];
+      return (
+        <li class="flex items-center bg-slate-200 rounded-md text-sm font-semibold
+         gap-1 p-1">
+          <div class="flex items-center gap-1">
+            <span class="size-4">
+              <Icon />
+            </span>
+            {name}
+          </div>
+        </li>
+      );
+    })
+  }
+</ul>
