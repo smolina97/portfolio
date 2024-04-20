@@ -1,0 +1,46 @@
+---
+import { UI } from "@/location/es.json";
+const { nav_bar_ui } = UI;
+const { bar_home, bar_education, bar_experience, bar_projects } = nav_bar_ui;
+---
+
+<div
+  class="  fixed flex-col backdrop-blur-lg border-b-2 border-r-2 border-slate-200 h-auto w-auto m-0 top-12"
+>
+  <div class="flex p-3">
+    <ul class="flex flex-col gap-3 w-full">
+      <li>
+        <a
+          class="block w-full p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#home"
+        >
+          {bar_home}
+        </a>
+      </li>
+      <li>
+        <a
+          class="block w-full p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#education"
+        >
+          {bar_education}
+        </a>
+      </li>
+      <li>
+        <a
+          class="block w-full p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#experience"
+        >
+          {bar_experience}
+        </a>
+      </li>
+      <li>
+        <a
+          class="block w-full p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#projects"
+        >
+          {bar_projects}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -5,23 +5,19 @@ import PrintButton from "@/components/navbar/PrintButton.astro";
 import MovilNavBar from "@/components/navbar/MovilNavBar.astro";
 import { UI } from "@/location/es.json";
 const { nav_bar_ui } = UI;
-const {
-  bar_logo,
-  bar_home,
-  bar_education,
-  bar_experience,
-  bar_projects,
-  bar_print,
-} = nav_bar_ui;
+const { bar_logo, bar_education, bar_experience, bar_projects } = nav_bar_ui;
 ---
 
 <nav
   class="flex items-center justify-between fixed
-             backdrop-blur-lg border-b-2 border-slate-200 h-9 w-full m-0 top-0"
+             backdrop-blur-lg border-b-2 border-slate-200 h-12 w-full m-0 top-0"
 >
   <div class="ml-2">
-    <a class=" s-phone:hidden " href="#home">{bar_logo}</a>
-    <MovilNavBar />
+    <a class="s-phone:hidden" href="#home">{bar_logo}</a>
+    <button id="hamburger-button"
+      class="hidden s-phone:flex p-2  rounded-md transition-all duration-600 ease-out"
+      ><i class="fa-solid fa-bars"></i>
+      </button>
   </div>
   <div class="s-phone:hidden justify-center absolute left-1/2 -translate-x-1/2">
     <ul class="flex items-center justify-center gap-2 w-full">
@@ -51,10 +47,42 @@ const {
       </li>
     </ul>
   </div>
-  <div class="flex items-center justify-center gap-2 mr-2" >
+  <div class="flex items-center justify-center gap-2 mr-2">
     <PrintButton />
     <ThemeButton />
     <LanguageSelector />
   </div>
 </nav>
+<nav id="movil-nav" class="hidden">
+  <MovilNavBar />
+</nav>
+<script is:inline>
+  const hamburgerButton = document.getElementById("hamburger-button");
+  const movilNav = document.getElementById("movil-nav");
+  const allNavs = document.querySelectorAll('nav');
 
+
+  hamburgerButton.addEventListener("click", () => {
+    movilNav.classList.toggle("s-phone:flex");
+    if (movilNav.classList.contains("s-phone:flex")) {
+      hamburgerButton.classList.add("bg-slate-950", "text-white");
+    } else {
+      hamburgerButton.classList.remove("bg-slate-950", "text-white");
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    let isClickInsideNav = false;
+    allNavs.forEach(nav => {
+      if (nav.contains(event.target)) {
+        isClickInsideNav = true;
+      }
+    });
+
+    if (!isClickInsideNav && movilNav.classList.contains('s-phone:flex')) {
+      movilNav.classList.remove('s-phone:flex');
+      hamburgerButton.classList.remove("bg-slate-950", "text-white");
+    }
+  });
+
+</script>
