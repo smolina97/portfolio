@@ -85,4 +85,14 @@ const { bar_logo, bar_education, bar_experience, bar_projects } = nav_bar_ui;
     }
   });
 
+  const updateNav = () => {
+    if (window.matchMedia("(min-width: 621px)").matches) {
+      movilNav.classList.remove("s-phone:flex");
+      hamburgerButton.classList.remove("bg-slate-950", "text-white");
+    }
+  };
+
+    window.addEventListener('resize', updateNav);
+      updateNav();
+
 </script>
