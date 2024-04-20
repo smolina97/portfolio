@@ -38,4 +38,5 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
+  darkMode: "class",
 };

@@ -1,0 +1,64 @@
+---
+
+---
+
+<button
+  title="Toggle Theme"
+  onclick="theme();"
+  class="flex
+        items-center
+        w-9
+        h-3
+        rounded-full
+        border-2
+        border-solid
+        border-slate-300
+        bg-slate-200
+        transition-colors
+        duration-500
+        ease-in
+        focus:outline-none
+        focus:ring-2
+        focus:ring-blue-700
+        dark:focus:ring-blue-600
+        focus:border-transparent"
+>
+  <div
+    id="toggle"
+    class="rounded-full
+            size-6
+            bg-blue-400
+            dark:bg-slate-800
+            absolute
+            -ml-1
+            dark:ml-4
+            pointer-events-none
+            transition-all
+            duration-300
+            ease-out
+            flex
+            items-center
+            justify-center"
+  >
+    <i id="sunIcon" class="fa-regular fa-sun text-white"></i>
+    <i
+      id="moonIcon"
+      class="fa-regular fa-moon text-white"
+      style="display: none;"></i>
+  </div>
+</button>
+<script is:inline>
+  function theme() {
+    const isDark = document.documentElement.classList.toggle("dark");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    if (isDark) {
+      sunIcon.style.display = "none";
+      moonIcon.style.display = "block";
+    } else {
+      sunIcon.style.display = "block";
+      moonIcon.style.display = "none";
+    }
+  }
+</script>
