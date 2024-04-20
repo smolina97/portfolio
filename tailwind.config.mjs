@@ -31,6 +31,8 @@ export default {
         section: {
           maxWidth: "700px",
           margin: "0 auto 72px",
+          padding: "0 16px",
+          
         },
       });
     },

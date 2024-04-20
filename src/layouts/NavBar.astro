@@ -1,5 +1,59 @@
 ---
 import ThemeButton from "@/components/navbar/ThemeButton.astro";
+import LanguageSelector from "@/components/navbar/LanguageSelector.astro";
+import PrintButton from "@/components/navbar/PrintButton.astro";
+import MovilNavBar from "@/components/navbar/MovilNavBar.astro";
+import { UI } from "@/location/es.json";
+const { nav_bar_ui } = UI;
+const {
+  bar_logo,
+  bar_home,
+  bar_education,
+  bar_experience,
+  bar_projects,
+  bar_print,
+} = nav_bar_ui;
 ---
 
-<ThemeButton />
+<nav
+  class="flex items-center justify-between fixed
+             backdrop-blur-lg border-b-2 border-slate-200 h-9 w-full m-0 top-0"
+>
+  <div class="ml-2">
+    <a class=" s-phone:hidden " href="#home">{bar_logo}</a>
+    <MovilNavBar />
+  </div>
+  <div class="s-phone:hidden justify-center absolute left-1/2 -translate-x-1/2">
+    <ul class="flex items-center justify-center gap-2 w-full">
+      <li>
+        <a
+          class="p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#education"
+        >
+          {bar_education}
+        </a>
+      </li>
+      <li>
+        <a
+          class="p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#experience"
+        >
+          {bar_experience}</a
+        >
+      </li>
+      <li>
+        <a
+          class="p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white"
+          href="#projects   "
+        >
+          {bar_projects}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="flex items-center justify-center gap-2 mr-2" >
+    <PrintButton />
+    <ThemeButton />
+    <LanguageSelector />
+  </div>
+</nav>
