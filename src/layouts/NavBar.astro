@@ -14,10 +14,11 @@ const { bar_logo, bar_education, bar_experience, bar_projects } = nav_bar_ui;
 >
   <div class="ml-2">
     <a class="s-phone:hidden" href="#home">{bar_logo}</a>
-    <button id="hamburger-button"
-      class="hidden s-phone:flex p-2  rounded-md transition-all duration-600 ease-out"
+    <button
+      id="hamburger-button"
+      class="hidden s-phone:flex p-2 rounded-md transition-all duration-600 ease-out"
       ><i class="fa-solid fa-bars"></i>
-      </button>
+    </button>
   </div>
   <div class="s-phone:hidden justify-center absolute left-1/2 -translate-x-1/2">
     <ul class="flex items-center justify-center gap-2 w-full">
@@ -59,8 +60,7 @@ const { bar_logo, bar_education, bar_experience, bar_projects } = nav_bar_ui;
 <script is:inline>
   const hamburgerButton = document.getElementById("hamburger-button");
   const movilNav = document.getElementById("movil-nav");
-  const allNavs = document.querySelectorAll('nav');
-
+  const allNavs = document.querySelectorAll("nav");
 
   hamburgerButton.addEventListener("click", () => {
     movilNav.classList.toggle("s-phone:flex");
@@ -71,16 +71,16 @@ const { bar_logo, bar_education, bar_experience, bar_projects } = nav_bar_ui;
     }
   });
 
-  document.addEventListener('click', function(event) {
+  document.addEventListener("click", function (event) {
     let isClickInsideNav = false;
-    allNavs.forEach(nav => {
+    allNavs.forEach((nav) => {
       if (nav.contains(event.target)) {
         isClickInsideNav = true;
       }
     });
 
-    if (!isClickInsideNav && movilNav.classList.contains('s-phone:flex')) {
-      movilNav.classList.remove('s-phone:flex');
+    if (!isClickInsideNav && movilNav.classList.contains("s-phone:flex")) {
+      movilNav.classList.remove("s-phone:flex");
       hamburgerButton.classList.remove("bg-slate-950", "text-white");
     }
   });
@@ -92,7 +92,5 @@ const { bar_logo, bar_education, bar_experience, bar_projects } = nav_bar_ui;
     }
   };
 
-    window.addEventListener('resize', updateNav);
-      updateNav();
-
+  window.addEventListener("resize", updateNav);
 </script>
