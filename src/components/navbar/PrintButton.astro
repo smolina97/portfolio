@@ -4,13 +4,13 @@ const { nav_bar_ui } = UI;
 const { bar_print } = nav_bar_ui;
 ---
 
-<a class="p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white" 
+<button class="p-0.5 pr-1 pl-1 rounded-lg transition-all duration-600 ease-out hover:bg-slate-950 hover:text-white active:bg-slate-950 active:text-white" 
     id="print-button" title={bar_print}>
     <i class="fa-solid fa-download mr-2"></i><i class="fa-solid fa-print"></i>
-</a>
+</button>
 
-<script>
-    document.getElementById("print-button")?.addEventListener("click", () => {
+<script is:inline>
+    document.getElementById("print-button").addEventListener("click", () => {
         window.print();
     });
 </script>
