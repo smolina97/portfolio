@@ -44,10 +44,10 @@ const skill_icon: Record<string, any> = {
       const Icon = skill_icon[name];
       return (
         <li class="flex items-center border border-solid bg-slate-200 rounded-md text-sm font-semibold
-         gap-1 p-1">
+         gap-1 p-1 dark:bg-slate-700 dark:text-slate-200 dark:print:text-black">
           <div class="flex items-center gap-1">
-            <span class="size-4">
-              <Icon />
+            <span class="size-4 dark:fill-slate-200 dark:print:fill-black">
+              <Icon/>
             </span>
             {name}
           </div>
