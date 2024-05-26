@@ -26,6 +26,13 @@ const { title } = Astro.props;
     color: #fff;
   }
 
+  @media print {
+    html, body {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
   section::before {
     content: "";
     display: block;

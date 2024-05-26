@@ -25,6 +25,11 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+      textColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus', 'print'],
+    },
+  },
   plugins: [
     function ({ addComponents }) {
       addComponents({

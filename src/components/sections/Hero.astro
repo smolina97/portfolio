@@ -24,7 +24,7 @@ const printinfo = [email, phone, linkdinurl, githuburl]
     class="flex flex-col gap-2 pr-8 w-4/5
     s-phone:order-2 s-phone:flex s-phone:items-center s-phone:justify-center s-phone:pr-0"
   >
-    <h1 class="dark:text-cyan-500">{name}</h1>
+    <h1 class="dark:text-cyan-500 print:text-black">{name}</h1>
     <h1>{label}</h1>
     <h1>{university}</h1>
     <span>
@@ -92,4 +92,11 @@ const printinfo = [email, phone, linkdinurl, githuburl]
       width: 100%;
     }
   }
+
+  @media print {
+    html h1, h2, h3, h4, h5, h6, p, span, a, i, footer {
+      color: black !important;
+    }
+  }
+
 </style>
